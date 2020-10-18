@@ -1,0 +1,30 @@
+package homework_3;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author GRIFFIN
+ */
+public class Average {
+    
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        
+        System.out.print("First number: ");
+        double firstNum = in.nextDouble();
+        System.out.print("Second number: ");
+        double secondNum = in.nextDouble();
+        System.out.print("Third number: ");
+        double thirdNum = in.nextDouble();
+        
+        System.out.printf("The average is %, .4f\n", Average.avr(firstNum, secondNum, thirdNum));  
+        
+    }
+    
+      public static double avr(double a, double b, double c)
+    {
+        return (a + b + c) / 3;
+    }
+    
+}
