@@ -1,0 +1,28 @@
+package homework_3;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author GRIFFIN
+ */
+public class DiceRoll {
+    
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Desired sum of two rolls: ");
+        int desiredSum  = in.nextInt();
+        
+        int firstRoll = (int)((Math.random() * (6 - 1)) + 1);
+        int secondRoll = (int)((Math.random() * (6 - 1)) + 1);
+        
+        System.out.printf("First roll was %d, second roll was %d, the sum is %d\n", firstRoll, secondRoll, firstRoll + secondRoll);
+        
+        if(firstRoll + secondRoll == desiredSum) {
+            System.out.println("Win: true");
+        }else {
+            System.out.println("Win: false");
+        }
+    }
+    
+}
