@@ -1,0 +1,38 @@
+package homework_3;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author GRIFFIN
+ */
+public class Average2 {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        
+        System.out.print("First number: ");
+        short firstNum = in.nextShort();
+        System.out.print("Second number: ");
+        short secondNum = in.nextShort();
+        System.out.print("Third number: ");
+        short thirdNum = in.nextShort();
+        System.out.print("Fourth number: ");
+        short fourthNum = in.nextShort();
+        
+        System.out.printf("The average, calculated with whole number division is %.0f\n",Average2.avrInteger(firstNum, secondNum, thirdNum, fourthNum) );
+        System.out.printf("The average, calculated with decimal number division is %.2f\n", Average2.avrDecimal(firstNum, secondNum, thirdNum, fourthNum));
+        
+    }
+    
+    public static double avrInteger(int a, int b, int c, int d)
+    {
+        return (a + b + c + d) / 4;
+    }
+    
+        
+    public static double avrDecimal(int a, int b, int c, int d)
+    {
+        return (double)(a + b + c + d) / 4.0;
+    }
+    
+}
